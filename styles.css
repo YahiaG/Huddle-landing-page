@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+}
+@media (max-width: 767px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+    }
+}
+@media (min-width: 768px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+    }
+}
+main {
+    padding: 35px;
+}
+@media (min-width: 992px) {
+    main {
+        padding: 50px;
+    }
+}
+.logo {}
+.logo img {
+    margin-bottom: 50px;
+}
+@media (max-width:767px) {
+    .logo img {
+        width: 125px;
+    }
+}
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+}
+.content .image {}
+.content .image img {
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+.content .info {
+    text-align: center;
+    color: #FFF;
+}
+@media (min-width: 768px) {
+    .content .info {
+        text-align: left;
+        max-width: 550px;
+        flex-basis: 50%;
+    }
+}
+.content .info h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+    .content .info h1 {
+        font-size: 40px;
+    }
+}
+.content .info p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.content .info button {
+    margin-bottom: 50px;
+    background-color: #FFF;
+    color: var(--Violet);
+    border: 1px solid var(--Violet);
+    padding: 15px 70px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px 2px rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.content .info button:hover {
+    background-color: var(--Soft-Magenta);
+    color: #FFF;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+@media (min-width: 768px) {
+    .social {
+        justify-content: flex-end;
+    }   
+}
+.social a {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+.social svg {
+    width: 15px;
+    fill: #FFF;
+}
